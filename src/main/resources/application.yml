@@ -1,0 +1,15 @@
+micronaut:
+    application:
+        name: micronaut-nonblocking-async-demo
+
+    server:
+        maxRequestSize: 1MB
+        host: localhost
+        netty:
+           maxHeaderSize: 500KB
+           worker:
+              threads: 1
+           parent:
+              threads: 1
+           childOptions:
+              autoRead: true
